@@ -8,9 +8,10 @@ import java.awt.event.MouseListener;
 public class ButtonMouseListener extends MouseAdapter implements MouseListener {
     @Override
         public void mouseClicked(MouseEvent e){
-        JButton b = (JButton) e.getSource(); //casting para la compilación
+        //casting para la compilación, porque originalmente devuelve uno arriba de la jerarquía (Component object)
+        JButton b = (JButton) e.getSource();
         System.out.println("Click!!");
-        System.out.println(e.getSource());
+        System.out.println(b.getText());
     }
 }
-//swiong->component->jradiobutton,jlabel,etc
+//swing->component->jradiobutton,jlabel,etc
