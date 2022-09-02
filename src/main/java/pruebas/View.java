@@ -11,4 +11,11 @@ public class View {
     public JPanel getPanel() {
         return panel;
     }
+
+    //listener va en el view
+
+    public View() {
+        ButtonMouseListener bml = new ButtonMouseListener();
+        agregar.addMouseListener(bml);
+    }
 }
