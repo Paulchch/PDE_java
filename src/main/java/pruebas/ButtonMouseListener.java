@@ -1,5 +1,6 @@
 package pruebas;
 
+import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -7,6 +8,9 @@ import java.awt.event.MouseListener;
 public class ButtonMouseListener extends MouseAdapter implements MouseListener {
     @Override
         public void mouseClicked(MouseEvent e){
+        JButton b = (JButton) e.getSource(); //casting para la compilación
         System.out.println("Click!!");
+        System.out.println(e.getSource());
     }
 }
+//swiong->component->jradiobutton,jlabel,etc

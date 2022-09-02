@@ -17,5 +17,7 @@ public class View {
     public View() {
         ButtonMouseListener bml = new ButtonMouseListener();
         agregar.addMouseListener(bml);
+        borrar.addMouseListener(bml);
+        //se deberia hacer agregarMouseListener y borrarMouseListener por aparte para que hagan cosas diferentes
     }
 }
